@@ -3,4 +3,13 @@ module.exports = {
     pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
 }
 
-//http://**api.tpay.furti.mobi:9933/headerenrichment/subcheck
+module.exports = {
+    exportPathMap: async function (
+        defaultPathMap,
+        { dev, dir, outDir, distDir, buildId }
+    ) {
+        return {
+            '/': { page: '/' },
+            '/about': { page: '/about' }}
+    },
+}

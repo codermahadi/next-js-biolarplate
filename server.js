@@ -9,7 +9,11 @@ app.prepare().then(() => {
     const server = express();
 
     server.get('/:vehicle/:bruno', (req, res) => {
-        return app.render(req, res, '/vehicle', { productUrl: req.params.productUrl})
+        return app.render(req, res, '/vehicle', {productUrl: req.params.productUrl})
+    });
+
+    server.get('/about', (req, res) => {
+        return app.render(req, res, '/about')
     })
     server.get('*', (req, res) => {
         return handle(req, res);
