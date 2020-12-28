@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "node server.js",
     "build": "next build && next export",
     "start": "next start",
     "export": "npm run build && next export"
-
   },
   "dependencies": {
     "crypto": "^1.0.1",
+    "express": "^4.17.1",
     "moment": "^2.29.1",
     "next": "10.0.4",
     "react": "17.0.1",
